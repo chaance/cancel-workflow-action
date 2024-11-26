@@ -189,8 +189,8 @@ _Note_ : This is typical when global access is set to be restrictive. Only this 
 ## Contributing
 
 - Clone this repo
-- Run `yarn install`
+- Run `npm install`
 - Edit `./src/index.ts`
-- Run `yarn build`
-- Run `yarn format`
+- Run `npm run build`
+- Run `npm run format`
 - Commit changes including `./dist/index.js` bundle
