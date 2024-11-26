@@ -1,6 +1,6 @@
 name: 'Cancel Workflow Action'
 description: 'This Action will cancel any previous runs that are not `completed` for a given workflow.'
-author: styfle
+author: chaance
 branding:
   icon: 'stop-circle'
   color: 'white'
@@ -24,5 +24,5 @@ inputs:
     description: "Optional - Cancel runs with a specific status, such as `waiting`."
     required: false
 runs:
-  using: 'node20'
+  using: 'node22'
   main: 'dist/index.js'

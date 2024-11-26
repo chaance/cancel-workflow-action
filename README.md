@@ -31,7 +31,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Cancel Previous Runs
-        uses: styfle/cancel-workflow-action
+        uses: chaance/cancel-workflow-action
       #- name: Run Tests
       #  uses: actions/setup-node
       #  run: node test.js
@@ -43,12 +43,12 @@ jobs:
 It is recommended to pin a specific version of this action so you don't automatically upgrade to the latest which could introduce breaking changes.
 
 ```yml
-uses: styfle/cancel-workflow-action@0.9.1
+uses: chaance/cancel-workflow-action@0.9.1
 ```
 
 Notice there is no `v` prefix, just the `@major.minor.patch` version.
 
-Visit [Releases](https://github.com/styfle/cancel-workflow-action/releases) to find the latest version at the top of the page.
+Visit [Releases](https://github.com/chaance/cancel-workflow-action/releases) to find the latest version at the top of the page.
 
 > **Warning**
 > 
@@ -70,7 +70,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 3
     steps:
-      - uses: styfle/cancel-workflow-action
+      - uses: chaance/cancel-workflow-action
         with:
           workflow_id: 479426
 ```
@@ -99,7 +99,7 @@ jobs:
   cancel:
     runs-on: ubuntu-latest
     steps:
-    - uses: styfle/cancel-workflow-action
+    - uses: chaance/cancel-workflow-action
       with:
         workflow_id: ${{ github.event.workflow.id }}
 ```
@@ -119,7 +119,7 @@ jobs:
     timeout-minutes: 3
     steps:
       - name: Cancel build runs
-        uses: styfle/cancel-workflow-action
+        uses: chaance/cancel-workflow-action
         with:
           ignore_sha: true
           workflow_id: 479426
@@ -140,7 +140,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 3
     steps:
-      - uses: styfle/cancel-workflow-action
+      - uses: chaance/cancel-workflow-action
         with:
           all_but_latest: true
 ```
@@ -158,7 +158,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 3
     steps:
-      - uses: styfle/cancel-workflow-action
+      - uses: chaance/cancel-workflow-action
         with:
           only_status: 'waiting'
 ```
@@ -179,7 +179,7 @@ jobs:
       actions: write
     steps:
       - name: Cancel Previous Runs
-        uses: styfle/cancel-workflow-action
+        uses: chaance/cancel-workflow-action
         with:
           access_token: ${{ github.token }}
 ```
