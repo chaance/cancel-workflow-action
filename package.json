@@ -7,7 +7,7 @@
     "build": "ncc build src/index.ts --license LICENSES.txt",
     "format": "prettier --write '**/*.ts'",
     "format-check": "prettier --check '**/*.ts'",
-    "prepare": "husky install"
+    "prepare": "husky"
   },
   "dependencies": {
     "@actions/core": "1.11.1",
